@@ -1,0 +1,46 @@
+package:
+  name: chroma
+  version: "0.0.9"
+
+build:
+  number: 0
+  skip: True  # [py27]
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+
+source:
+  sha256: 76486569af8958662184687da9c6846610d4dbf3a19978c7e9ef69f2fe603c82
+  url: https://github.com/marianogabitto/ChromA/archive/b7c0b467f321ad75b62070ee0ddb5b1351aa1bf6.zip
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - matplotlib
+    - pysam
+    - seaborn
+    - ray
+    - scipy
+    - setproctitle
+    - psutil
+
+test:
+  commands:
+    - ChromA --help
+
+about:
+  home: https://github.com/marianogabitto/ChromA/
+  license: GPL
+  license_file: LICENSE.txt
+  summary: Chromatin Accessibility Annotation Tool
+  description: |
+    ChromA is a probabilistic model to annotate chromatin regions into 
+    accessible or inaccessible, open or closed, based on their ATACseq profile. 
+    ChromA can process bulk datasets, single-cell or integrate information from 
+    a combination of both. Even more, ChromA can integrate information from 
+    different replicates or different cellular populations to create a 
+    consensus representation of chromatin accessibility.
