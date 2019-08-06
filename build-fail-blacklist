@@ -1514,7 +1514,6 @@ recipes/bioconductor-genomeinfodb
 recipes/bioconductor-genomeintervals
 recipes/bioconductor-genomicalignments
 recipes/bioconductor-genomicdatacommons
-recipes/bioconductor-genomicfeatures
 recipes/bioconductor-genomicfiles
 recipes/bioconductor-genomicinteractions
 recipes/bioconductor-genomicranges
@@ -2820,7 +2819,6 @@ recipes/bioconductor-rtn
 recipes/bioconductor-rtnduals
 recipes/bioconductor-rtnsurvival
 recipes/bioconductor-rtopper
-recipes/bioconductor-rtracklayer
 recipes/bioconductor-rtreemix
 recipes/bioconductor-rtrm
 recipes/bioconductor-rtrmui
